@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web Page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1> Interactive web Page</h1>
+
+    <!-- 🎮 Light/Dark Mode Toggle -->
+    <button id="themeToggle">Toggle Light/Dark Mode</button>
+
+    <!-- 🎮 Counter Button -->
+    <div>
+        <p>Button clicked <span id="clickCount">0</span> times</p>
+        <button id="counterBtn">Click Me!</button>
+    </div>
+
+    <!-- 🎮 Collapsible FAQ -->
+    <div class="faq">
+        <h3 class="faq-question">What is this page about?</h3>
+        <p class="faq-answer hidden">It's a demo of JavaScript interactivity!</p>
+    </div>
+
+    <!-- 📋 Form Section -->
+    <form id="signupForm">
+        <h2>Sign Up</h2>
+        <label>Name: <input type="text" id="name" /></label><br />
+        <label>Email: <input type="text" id="email" /></label><br />
+        <label>Password: <input type="password" id="password" /></label><br />
+        <button type="submit">Submit</button>
+        <p id="formMessage"></p>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
