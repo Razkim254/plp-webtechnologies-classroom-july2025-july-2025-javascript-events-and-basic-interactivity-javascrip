@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 body.dark-mode {
     background-color: #121212;
     color: #e49d9d;
+=======
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode {
+    background-color: #db9e9e;
+    color: #f0ebeb;
+>>>>>>> 63a7f57f9fb588862b575e8bd5b37fd68316568e
 }
 
 .hidden {
@@ -12,7 +24,13 @@ body.dark-mode {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 input {
     display: block;
     margin: 10px 0;
+=======
+#formMessage {
+    color: red;
+    font-weight: bold;
+>>>>>>> 63a7f57f9fb588862b575e8bd5b37fd68316568e
 }
