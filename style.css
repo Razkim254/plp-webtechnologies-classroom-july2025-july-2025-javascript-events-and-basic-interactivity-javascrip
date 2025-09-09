@@ -1,0 +1,18 @@
+body.dark-mode {
+    background-color: #121212;
+    color: #e49d9d;
+}
+
+.hidden {
+    display: none;
+}
+
+.faq {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+}
