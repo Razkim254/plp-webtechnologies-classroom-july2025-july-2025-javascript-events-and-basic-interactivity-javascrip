@@ -1,36 +1,51 @@
-<<<<<<< HEAD
 body.dark-mode {
-    background-color: #121212;
-    color: #e49d9d;
-=======
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    transition: background-color 0.3s ease;
+  background-color: #121212;
+  color: #f0f0f0;
+
 }
 
-.dark-mode {
-    background-color: #db9e9e;
-    color: #f0ebeb;
->>>>>>> 63a7f57f9fb588862b575e8bd5b37fd68316568e
+button {
+  margin: 2px;
+  padding: 12px 20px;
+  cursor: pointer;
+    border: 10px solid #007BFF;
+    border-radius: 5px;
+    background-color: #007BFF;
 }
 
-.hidden {
-    display: none;
+button:hover {
+  background-color: #0056b3;
+  color: rgb(241, 227, 227);
+}
+h1, h2 {
+  margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+    color: #9e6464;
 }
 
-.faq {
-    margin-top: 20px;
-    cursor: pointer;
+#formSection {
+  margin-top: 50px;
+  padding: 20px;
+  border: 5px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  max-width: 200px;
+  border-spacing: 40px 20px;
 }
 
-<<<<<<< HEAD
-input {
-    display: block;
-    margin: 10px 0;
-=======
-#formMessage {
-    color: red;
-    font-weight: bold;
->>>>>>> 63a7f57f9fb588862b575e8bd5b37fd68316568e
+#formSection label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#formSection input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;}
+
+  #formFeedback {
+  margin-top: 15px;
+  font-size: 0.9em;
 }

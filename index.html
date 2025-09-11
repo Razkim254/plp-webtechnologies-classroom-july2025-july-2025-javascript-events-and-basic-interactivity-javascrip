@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Web Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Interactive Web Page 🎉</h1>
+
+  <!-- Part 1: Event Handling -->
+  <button id="messageBtn">Click here!</button>
+<p id="imageContainer" style="display: none;">
+  <img id="funImage" src="zeb.jpg" alt="Fun Image" style="max-width: 100%;" />
+</p>
+
+  <!-- Part 2: Interactive Elements -->
+  <section>
+    <h2>Theme Mode</h2>
+    <button id="themeToggle">Toggle Theme</button>
+  </section>
+
+  <section>
+    <section id="counterGame">
+  <h2>🎯 Counter Game</h2>
+  <button id="counterBtn">Count</button>
+  <p>Score: <span id="countDisplay">0</span></p>
+  <p id="gameMessage"></p>
+
+    <p>Count: <span id="countDisplay">0</span></p>
+    <button id="resetBtn">Reset</button>
+    <p id="timerDisplay">Time left: 10s</p>
+    <button id="startGame">Start Game</button></section>
+
+  <!-- Part 3: Form Validation -->
+  <section id="formSection">
+    <h2>📋 Sign Up Form</h2>
+    <form id="signupForm">
+      <label>Name: <input type="text" id="name" /></label><br />
+      <label>Email: <input type="text" id="email" /></label><br />
+      <label>Password: <input type="password" id="password" /></label><br />
+      <button type="submit">Submit</button>
+    </form>
+    <div id="formFeedback"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

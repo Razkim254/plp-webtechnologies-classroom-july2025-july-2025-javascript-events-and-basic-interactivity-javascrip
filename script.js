@@ -1,103 +1,77 @@
-<<<<<<< HEAD
-// 🌗 Light/Dark Mode Toggle
-=======
-// 🎮 Light/Dark Mode Toggle
->>>>>>> 63a7f57f9fb588862b575e8bd5b37fd68316568e
-document.getElementById('themeToggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+// 🎉 Part 1: Event Handling
+document.getElementById("messageBtn").addEventListener("click", () => {
+  const msg = document.getElementById("messageText");
+  msg.style.display = msg.style.display === "none" ? "block" : "none";
 });
 
-<<<<<<< HEAD
-// 🔢 Counter Game
+// 🎮 Part 2: Interactive Elements
+
+// Light/Dark Mode Toggle
+document.getElementById("themeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+// Counter Game Logic
 let count = 0;
-document.getElementById('incrementBtn').addEventListener('click', () => {
-    count++;
-    document.getElementById('count').textContent = count;
+const countDisplay = document.getElementById("countDisplay");
+const gameMessage = document.getElementById("gameMessage");
+
+document.getElementById("counterBtn").addEventListener("click", () => {
+  count++;
+  countDisplay.textContent = count;
+
+  // Fun messages based on score
+  if (count === 5) {
+    gameMessage.textContent = "🔥 You're warming up!";
+  } else if (count === 10) {
+    gameMessage.textContent = "🚀 You're on fire!";
+  } else if (count === 20) {
+    gameMessage.textContent = "🏆 Champion mode unlocked!";
+  } else {
+    gameMessage.textContent = "";
+  }
 });
 
-// ❓ Collapsible FAQ
-const faqQuestion = document.querySelector('.faq-question');
-const faqAnswer = document.querySelector('.faq-answer');
 
-faqQuestion.addEventListener('click', () => {
-    faqAnswer.classList.toggle('hidden');
+// 📋✅ Part 3: Form Validation
+document.getElementById("signupForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent form submission
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+  const feedback = document.getElementById("formFeedback");
+
+  let errors = [];
+
+  // Name validation
+  if (name === "") {
+    errors.push("Name is required.");
+  }
+
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    errors.push("Enter a valid email address.");
+  }
+
+  // Password validation
+  if (password.length < 6 || !/\d/.test(password)) {
+    errors.push("Password must be at least 6 characters and include a number.");
+  }
+
+  // Show feedback
+  if (errors.length > 0) {
+    feedback.innerHTML = `<ul>${errors.map(err => `<li>${err}</li>`).join("")}</ul>`;
+    feedback.style.color = "red";
+  } else {
+    feedback.textContent = "Form submitted successfully!";
+    feedback.style.color = "green";
+  }
 });
 
-// ✅ Form Validation
-document.getElementById('signupForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
-    const feedback = document.getElementById('formFeedback');
-
-    let errors = [];
-
-    // Name validation
-    if (name.length < 2) {
-        errors.push('Name must be at least 2 characters.');
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        errors.push('Enter a valid email.');
-    }
-
-    // Password validation
-    if (password.length < 6) {
-        errors.push('Password must be at least 6 characters.');
-    }
-
-    // Show feedback
-    if (errors.length > 0) {
-        feedback.innerHTML = `<ul>${errors.map(err => `<li>${err}</li>`).join('')}</ul>`;
-        feedback.style.color = 'red';
-    } else {
-        feedback.textContent = 'Form submitted successfully!';
-        feedback.style.color = 'green';
-        this.reset();
-    }
-=======
-// 🎮 Counter Button
-let count = 0;
-document.getElementById('counterBtn').addEventListener('click', () => {
-    count++;
-    document.getElementById('clickCount').textContent = count;
+document.getElementById("messageBtn").addEventListener("click", () => {
+  const imageContainer = document.getElementById("imageContainer");
+  imageContainer.style.display = imageContainer.style.display === "none" ? "block" : "none";
 });
 
-// 🎮 Collapsible FAQ
-document.querySelector('.faq-question').addEventListener('click', () => {
-    document.querySelector('.faq-answer').classList.toggle('hidden');
-});
-
-// 📋 Form Validation
-document.getElementById('signupForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent form from submitting
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value;
-
-    let message = '';
-
-    // Validate name
-    if (name.length < 2) {
-        message = 'Name must be at least 2 characters long.';
-    }
-    // Validate email using regex
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        message = 'Please enter a valid email address.';
-    }
-    // Validate password
-    else if (password.length < 6) {
-        message = 'Password must be at least 6 characters.';
-    } else {
-        message = 'Form submitted successfully!';
-        document.getElementById('formMessage').style.color = 'green';
-    }
-
-    document.getElementById('formMessage').textContent = message;
->>>>>>> 63a7f57f9fb588862b575e8bd5b37fd68316568e
-});
